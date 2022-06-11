@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Details | Table</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+        	
+            table,th,td{
+                border: 0.5px solid #D3D3D3;
+                height: 20px;
+            }
+            th{
+                text-align: left;
+            }
+            table{
+            border-collapse: collapse;
+            width: 80%;
+            margin: auto;
+            }
+
+        .pagination{
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: right;
+        }
+
+        .status{
+            width: 50%;
+         }
+       
+        .pagination a {
+            color: black;
+            padding: 5px 9px;
+            text-decoration: none;
+            transition: background-color .3s;
+            border-radius: 50%;
+            background-color: lightgrey;
+            margin: 0 2px;
+            }
+
+        .pagination a.active {
+            background-color: dodgerblue;
+            color: white;
+            }
+
+        /* Add a grey background color on mouse-over */
+        .pagination a:hover:not(.active) {
+         background-color: #ddd;
+        }
+        
+        .header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+
+        .left{
+        display: flex;
+        align-items: left;
+        width: 20%;
+        }
+
+        .middle{
+        width:40%;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        }
+
+        .right{
+        margin-bottom: 24px;
+        width:20%;
+        display: flex;
+        align-items: right;
+        }
+
+        input{
+        width:100%;
+        margin-bottom: 15px;
+        border:2px solid black;
+        }
+
+        .footer{
+         width: 80%;
+         display: flex;
+        margin:auto;
+        }
+
+        .container{
+            border:5px solid black;
+        }
+
+    </style>
+</head> 
+    
+<body>
+<div class="container">
+    <div class="header">
+     <div class="left">
+        show<select>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option selected="selected">5</option>
+        </select>entries
+    </div>
+
+<div class="middle">
+        <p style="font-size: 150%;">Customer <span style="font-weight: bold">Details</span></p>
+</div>
+<div class="right">
+        <input type="text" name="" placeholder="search">
+</div>
+</div>
+
+
+<div class="table">
+<table>
+    <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>Pincode</th>
+        <th>Country</th>
+        <th>Actions</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Thomas Hardy</td>
+        <td>89 Chiarsco Rd</td>
+        <td>Portland</td>
+        <td>91219</td>
+        <td>USA</td>
+        <td><i class="material-icons" style="color: dodgerblue; font-size: 20px;">visibility</i>
+        <i class="material-icons" style="color: orange; font-size: 20px;">create</i>
+        <i class="material-icons" style="color: red; font-size: 20px;">delete</i></td>
+    </tr>
+     <tr>
+        <td>2</td>
+        <td>Maria Anders</td>
+        <td>Obere Str.57</td>
+        <td>Berlin</td>
+        <td>12209</td>
+        <td>Germany</td>
+        <td><i class="material-icons" style="color: dodgerblue; font-size: 20px;">visibility</i>
+        <i class="material-icons" style="color: orange; font-size: 20px;">create</i>
+        <i class="material-icons" style="color: red; font-size: 20px;">delete</i></td>
+    </tr>
+     <tr>
+        <td>3</td>
+        <td>Fran Wilson</td>
+        <td>C/Araquil,67</td>
+        <td>Madrid</td>
+        <td>28023</td>
+        <td>Spain</td>
+        <td><i class="material-icons" style="color: dodgerblue; font-size: 20px;">visibility</i>
+        <i class="material-icons" style="color: orange; font-size: 20px;">create</i>
+        <i class="material-icons" style="color: red; font-size: 20px;">delete</i></td>
+    </tr>
+     <tr>
+        <td>4</td>
+        <td>Dominic Perrier</td>
+        <td>25,rue Lauriston</td>
+        <td>Paris</td>
+        <td>75016</td>
+        <td>France</td>
+        <td><i class="material-icons" style="color: dodgerblue; font-size: 20px;">visibility</i>
+        <i class="material-icons" style="color: orange; font-size: 20px;">create</i>
+        <i class="material-icons" style="color: red; font-size: 20px;">delete</i></td>
+    </tr>
+     <tr>
+        <td>5</td>
+        <td>Martin Blank</td>
+        <td>Via Monteblanco 34</td>
+        <td>Turin</td>
+        <td>10100</td>
+        <td>Italy</td>
+        <td><i class="material-icons" style="color: dodgerblue; font-size: 20px;">visibility</i>
+        <i class="material-icons" style="color: orange; font-size: 20px;">create</i>
+        <i class="material-icons" style="color: red; font-size: 20px;">delete</i></td>
+    </tr>
+</table>
+</div>
+<div class="footer">
+<div class="status">
+    <p>Showing <span style="font-weight: bold">5</span> out of <span style="font-weight: bold">25</span> entries</p>
+</div>
+<div class="pagination">
+  <a href="#" style="border-radius: 5%">Previous</a>
+  <a href="#">1</a>
+    <a href="#">2</a>
+  <a class="active" href="#">3</a>
+  <a href="#">4</a>
+  <a href="#">5</a>
+  <a href="#" style="border-radius: 5%">Mext</a>
+</div>
+  
+</div>
+</div>
+
+
+</body>
+</html>
